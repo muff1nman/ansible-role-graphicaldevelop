@@ -23,5 +23,5 @@
     src: 99-inotify-user-instances.conf
     dest: /etc/sysctl.d/99-inotify-user-instances.conf
 
-- include_task: jetbrains_product.yml
+- include_tasks: jetbrains_product.yml
   with_items: "{{ jetbrains_products }}"
