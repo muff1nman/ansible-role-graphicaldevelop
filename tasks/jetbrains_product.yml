@@ -1,0 +1,33 @@
+---
+- name: Set filename
+  set_fact:
+    jetbrains_filename: "{{ item.name }}-{{ item.version }}.tar.gz"
+- name: Download jetbrains product
+  get_url:
+    url: "{{ jetbrains_mirror }}/{{ item.download_prefix }}/{{ jetbrains_filename }}"
+    checksum: "{{ item.checksum }}"
+    dest: "{{ jetbrains_tmp_directory }}"
+- name: Extract jetbrains product
+  unarchive:
+    src: "{{ jetbrains_tmp_directory }}/{{ jetbrains_filename }}"
+    dest: "/opt/{{ item.name | lower }}-{{ item.version }}"
+    mode: 0755
+    remote_src: True
+    extra_opts:
+    - --strip=1
+    creates: "/opt/{{ item.name | lower }}-{{ item.version }}/build.txt"
+- name: Set as default install
+  file:
+    state: link
+    src: "{{ item.name | lower }}-{{ item.version }}"
+    path: "/opt/{{ item.name | lower }}"
+- name: Setup desktop entry
+  template:
+    src: jetbrains.desktop
+    dest: "/usr/share/applications/{{ item.name | lower }}.desktop"
+
+- name: Fix permissions on directory
+  file:
+    path: /opt/{{ item.name | lower }}-{{ item.version }}
+    mode: 'u=rwX,g=rX,o=rX'
+    recurse: yes

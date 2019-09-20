@@ -1,0 +1,27 @@
+---
+- name: Install firefox
+  package:
+    name: firefox
+- name: Install FFMPEG (needed by firefox)
+  package:
+    name: ffmpeg
+- name: Install Google Chrome
+  package:
+    name: google-chrome-stable
+- name: Install VLC
+  package:
+    name: vlc
+- name: Install bless
+  package:
+    name: bless
+- name: Install dia
+  package:
+    name: dia
+
+- name: Increase inotify limits
+  copy:
+    src: 99-inotify-user-instances.conf
+    dest: /etc/sysctl.d/99-inotify-user-instances.conf
+
+- include_task: jetbrains_product.yml
+  with_items: "{{ jetbrains_products }}"

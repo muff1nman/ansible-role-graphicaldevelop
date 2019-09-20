@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name={{ item.name }}
+Exec=/opt/{{ item.name | lower }}/bin/{{ item.name | lower }}.sh
+Icon=/opt/{{ item.name | lower }}/bin/{{ item.name | lower }}.png
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Development;IDE;
