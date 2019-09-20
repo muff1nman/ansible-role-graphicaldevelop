@@ -7,6 +7,11 @@
     url: "{{ jetbrains_mirror }}/{{ item.download_prefix }}/{{ jetbrains_filename }}"
     checksum: "{{ item.checksum }}"
     dest: "{{ jetbrains_tmp_directory }}"
+- name: Ensure folder exists
+  file:
+    state: directory
+    path: "/opt/{{ item.name | lower }}-{{ item.version }}"
+    mode: 0775
 - name: Extract jetbrains product
   unarchive:
     src: "{{ jetbrains_tmp_directory }}/{{ jetbrains_filename }}"
