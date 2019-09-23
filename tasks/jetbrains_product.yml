@@ -6,7 +6,7 @@
   get_url:
     url: "{{ jetbrains_mirror }}/{{ item.download_prefix }}/{{ jetbrains_filename }}"
     checksum: "{{ item.checksum }}"
-    dest: "{{ jetbrains_tmp_directory }}"
+    dest: "{{ jetbrains_tmp_directory }}/{{ jetbrains_filename }}"
 - name: Ensure folder exists
   file:
     state: directory
