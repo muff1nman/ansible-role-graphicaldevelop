@@ -18,10 +18,14 @@
   package:
     name: dia
 
+- name: Remove old inotify limits file
+  file:
+    state: absent
+    path: /etc/sysctl.d/99-inotify-user-instances.conf
 - name: Increase inotify limits
   copy:
-    src: 99-inotify-user-instances.conf
-    dest: /etc/sysctl.d/99-inotify-user-instances.conf
+    src: 99-inotify.conf
+    dest: /etc/sysctl.d/99-inotify.conf
 
 - include_tasks: jetbrains_product.yml
   with_items: "{{ jetbrains_products }}"
