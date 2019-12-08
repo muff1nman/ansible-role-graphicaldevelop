@@ -6,6 +6,7 @@ jetbrains_products:
     version: 2019.2.2
     download_prefix: idea
     checksum: "sha256:5b16caa8a495f381b8d72b8c819c701d9cd39ae98efcaf05203d7e40a20fffae"
+    exe_filename: idea.sh
   - name: CLion
     download: https://download.jetbrains.com/cpp/CLion-2019.2.5.tar.gz
     download_prefix: cpp
