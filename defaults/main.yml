@@ -8,13 +8,13 @@ jetbrains_products:
     checksum: "sha256:5b16caa8a495f381b8d72b8c819c701d9cd39ae98efcaf05203d7e40a20fffae"
     exe_filename: idea.sh
   - name: CLion
-    download: https://download.jetbrains.com/cpp/CLion-2019.2.5.tar.gz
+    download: https://download.jetbrains.com/cpp/CLion-2020.2.3.tar.gz
     download_prefix: cpp
-    version: 2019.2.5
-    checksum: "sha256:aedec47a538c9a2b654c30719ed7f0111af0a708a2aeb2a9f36a1c0767841a5c"
+    version: 2020.2.3
+    checksum: "sha256:b863b5b1ed664c21428e5afafb39ebf7f30d062ef53731f3d093d7ee74abb4cd"
   - name: goland
-    download: https://download.jetbrains.com/go/goland-2019.2.3.tar.gz
+    download: https://download.jetbrains.com/go/goland-2020.2.2.tar.gz
     download_prefix: go
-    version: 2019.2.3
-    checksum: "sha256:d65d5fc57798652be47d6a540c41da3cf344c0ebabc357c0807c6999acff2b7d"
+    version: 2020.2.2
+    checksum: "sha256:b00e0dc5656c77cb786d84ebaf5dcee6eb65516cceeba16ea0023d0d4b5fcbe4"
 jetbrains_tmp_directory: "{{ lookup('env', 'TMPDIR') | default('/tmp',true) }}"
