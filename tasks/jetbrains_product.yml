@@ -1,7 +1,7 @@
 ---
 - name: Set filename
   set_fact:
-    jetbrains_filename: "{{ item.name }}-{{ item.version }}.tar.gz"
+    jetbrains_filename: "{{ item.download_name | default(item.name) }}-{{ item.version }}.tar.gz"
 - name: Download jetbrains product
   get_url:
     url: "{{ jetbrains_mirror }}/{{ item.download_prefix }}/{{ jetbrains_filename }}"
