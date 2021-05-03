@@ -17,6 +17,9 @@
 - name: Install dia
   package:
     name: dia
+- name: Install vscode
+  package:
+    name: code
 
 - name: Remove old inotify limits file
   file:
