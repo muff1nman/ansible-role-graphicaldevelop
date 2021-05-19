@@ -8,8 +8,8 @@ jetbrains_products:
     exe_filename: idea.sh
   - name: CLion
     download_prefix: cpp
-    version: 2020.2.3
-    checksum: "sha256:b863b5b1ed664c21428e5afafb39ebf7f30d062ef53731f3d093d7ee74abb4cd"
+    version: 2021.1.1
+    checksum: "sha256:30697eb96348e22668079f86758380880284d29848b29a3058cc19fc869bf477"
   - name: goland
     download_prefix: go
     version: 2020.2.2
