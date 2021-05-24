@@ -17,6 +17,6 @@ jetbrains_products:
   - name: pycharm
     download_prefix: python
     download_name: pycharm-professional
-    version: 2020.3
-    checksum: "sha256:a099d0aefa9e6a2e8507e0f89feb48f5839f529f21649393e22f52f641f2efcf"
+    version: 2021.1.1
+    checksum: "sha256:afdbb1f8b63f927b871dd11600e3eb71a739d60f471dc7f4a9752a1aed918971"
 jetbrains_tmp_directory: "{{ lookup('env', 'TMPDIR') | default('/tmp',true) }}"
