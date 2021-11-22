@@ -2,9 +2,9 @@
 jetbrains_mirror: https://download.jetbrains.com
 jetbrains_products:
   - name: ideaIU
-    version: 2020.3.1
+    version: 2021.2.3
     download_prefix: idea
-    checksum: "sha256:6053a4f4fce2c3c05c1abe0abc0ad37a938757a17431fa138113e8d04d9b231b"
+    checksum: "sha256:16929fd22b84b400d0b9e24fd356dd2e7a614511a2d779ee37082c90df179c25"
     exe_filename: idea.sh
   - name: CLion
     download_prefix: cpp
