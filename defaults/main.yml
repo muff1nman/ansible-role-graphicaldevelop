@@ -12,8 +12,8 @@ jetbrains_products:
     checksum: "sha256:30697eb96348e22668079f86758380880284d29848b29a3058cc19fc869bf477"
   - name: goland
     download_prefix: go
-    version: 2021.2.4
-    checksum: "sha256:c5c08a210358f291f7abffce4d151d43ddfbd38077b353e9ba24972fd1f7a70f"
+    version: 2022.3.1
+    checksum: "sha256:566eada40511cd06727d69047e8a6a1e75b06ebade93d1ea78262fc2715c8a38"
   - name: pycharm
     download_prefix: python
     download_name: pycharm-professional
